@@ -14,7 +14,7 @@ if [ -f "$PRINTER_DRIVER_PPD" ]; then
 else
   echo "Driver not found. Installing..."
   cd /tmp/
-  curl -L -o Drivers-CopyCat.dmg https://github.com/Nahobbs/Printer_Scripts/blob/main/Mac/Drivers/Drivers-CopyCat.dmg
+  curl -L -o Drivers-CopyCat.dmg https://github.com/Nahobbs/Printer_Scripts/releases/download/Alpha/Drivers-CopyCat.dmg
   #gunzip Drivers-CopyCat.dmg.gz
   hdiutil attach Drivers-CopyCat.dmg
   sudo installer -pkg "/Volumes/TOSHIBA ColorMFP/TOSHIBA ColorMFP.pkg" -target /
