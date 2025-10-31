@@ -6,6 +6,7 @@ PRINTER_DESCRIPTION="Computer_Science_Mailroom_Printer"
 PRINTER_URI="lpd://copycat.cs.uga.edu"
 PRINTER_DRIVER_PPD="/Library/Printers/PPDs/Contents/Resources/TOSHIBA_ColorMFP.gz"
 DRIVER_ARGS="ConfirmDepartmentCode=true"
+DRIVER_URL="https://github.com/Nahobbs/Printer_Scripts/blob/main/Mac/Drivers/Drivers-CopyCat.dmg.gz"
 
 # Check if the driver PPD exists otherwise try and install it
 if [ -f "$PRINTER_DRIVER_PPD" ]; then
@@ -13,8 +14,8 @@ if [ -f "$PRINTER_DRIVER_PPD" ]; then
 else
   echo "Driver not found. Installing..."
   cd /tmp/
-  curl -o Drivers-CopyCat.dmg.gz https://github.com/Nahobbs/Printer_Scripts/blob/main/Mac/Drivers/Drivers-CopyCat.dmg.gz
-  gunzip Drivers-CopyCat.dmg.gz
+  curl -L -o Drivers-CopyCat.dmg https://github.com/Nahobbs/Printer_Scripts/blob/main/Mac/Drivers/Drivers-CopyCat.dmg
+  #gunzip Drivers-CopyCat.dmg.gz
   hdiutil attach Drivers-CopyCat.dmg
   sudo installer -pkg "/Volumes/TOSHIBA ColorMFP/TOSHIBA ColorMFP.pkg" -target /
   hdiutil detach "/Volumes/TOSHIBA ColorMFP"
