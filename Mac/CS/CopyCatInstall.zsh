@@ -19,7 +19,7 @@ else
   hdiutil attach Drivers-CopyCat.dmg
   sudo installer -pkg "/Volumes/TOSHIBA ColorMFP/TOSHIBA ColorMFP.pkg" -target /
   hdiutil detach "/Volumes/TOSHIBA ColorMFP"
-  rm Drivers-CopyCat.dmg.dmg
+  rm Drivers-CopyCat.dmg
 
   # Verify install
   if [ ! -f "$PRINTER_DRIVER_PPD" ]; then
