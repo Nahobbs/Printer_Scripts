@@ -1,0 +1,5 @@
+# macOS: ignore Finder metadata files
+.DS_Store
+
+# Also ignore any .DS_Store files in subdirectories (cover-all)
+**/.DS_Store
