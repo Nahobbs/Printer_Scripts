@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 ## Variable Initialization/Declaration
-PRINTER_NAME="Math_Delta"
-PRINTER_DESCRIPTION="Math Mailroom Printer 'Delta'"
+PRINTER_NAME="Delta - Math Mailroom[434A]"
+PRINTER_DESCRIPTION="Math_Mailroom_Printer[Delta]"
 PRINTER_URI="ipp://delta.math.uga.edu"
 DRIVER_ARGS="printer-is-shared=false"
 
