@@ -13,12 +13,12 @@ if [ -f "$PRINTER_DRIVER_PPD" ]; then
 else
   echo "Driver not found. Installing..."
   cd /tmp/
-  curl -o TOSHIBA_ColorMFP.dmg.gz https://business.toshiba.com/downloads/KB/f1Ulds/20758/TOSHIBA_ColorMFP.dmg.gz
-  gunzip TOSHIBA_ColorMFP.dmg.gz
-  hdiutil attach TOSHIBA_ColorMFP.dmg
+  curl -o Drivers-CopyCat.dmg.gz https://github.com/Nahobbs/Printer_Scripts/blob/main/Mac/Drivers/Drivers-CopyCat.dmg.gz
+  gunzip Drivers-CopyCat.dmg.gz
+  hdiutil attach Drivers-CopyCat.dmg
   sudo installer -pkg "/Volumes/TOSHIBA ColorMFP/TOSHIBA ColorMFP.pkg" -target /
   hdiutil detach "/Volumes/TOSHIBA ColorMFP"
-  rm TOSHIBA_ColorMFP.dmg
+  rm Drivers-CopyCat.dmg.dmg
 
   # Verify install
   if [ ! -f "$PRINTER_DRIVER_PPD" ]; then
